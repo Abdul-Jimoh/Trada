@@ -1,0 +1,5 @@
+vision-agents
+python-dotenv
+fastapi
+uvicorn
+websockets

@@ -1,0 +1,27 @@
+# Python
+server/.venv/
+server/__pycache__/
+server/*.pyc
+server/.python-version
+
+# Environment variables - NEVER commit these
+server/.env
+client/.env
+.env
+
+# Node
+client/node_modules/
+client/dist/
+client/dist-ssr/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea

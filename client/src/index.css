@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0a0a0c;
+  color: #f8f8f8;
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for fintech look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+@theme {
+  --color-background: #0a0a0c;
+  --color-foreground: #f8f8f8;
+  --color-card: #121215;
+  --color-card-foreground: #f8f8f8;
+  --color-popover: #0a0a0c;
+  --color-popover-foreground: #f8f8f8;
+  --color-primary: #00ffa3;
+  --color-primary-foreground: #000000;
+  --color-secondary: #1e1e22;
+  --color-secondary-foreground: #f8f8f8;
+  --color-muted: #1e2126;
+  --color-muted-foreground: #9ca3af;
+  --color-accent: #00e5ff;
+  --color-accent-foreground: #000000;
+  --color-border: #27272a;
+  --color-input: #27272a;
+  --color-ring: #00ffa3;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-glow-pulse: glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.8;
+      filter: brightness(1.5) drop-shadow(0 0 10px #00ffa3);
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium transition-all hover:opacity-90 active:scale-95 shadow-[0_0_15px_-3px_rgba(0,255,163,0.3)];
+  }
+
+  .glass-card {
+    @apply bg-card/80 border border-border backdrop-blur-md rounded-xl p-6;
+  }
+}
