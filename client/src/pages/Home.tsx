@@ -27,9 +27,13 @@ export function Home() {
             >
               Launch Dashboard
             </Link>
-            <button className="px-8 py-3 rounded-xl bg-secondary border border-border font-semibold hover:bg-secondary/80 transition-all text-lg">
+            <Link
+              to="https://github.com/Abdul-Jimoh/Trada"
+              target="_blank"
+              className="px-8 py-3 rounded-xl bg-secondary border border-border font-semibold hover:bg-secondary/80 transition-all text-lg"
+            >
               View Documentation
-            </button>
+            </Link>
           </div>
         </motion.div>
       </section>
