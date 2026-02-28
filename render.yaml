@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: trada
+    runtime: python
+    rootDir: server
+    buildCommand: apt-get install -y libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev libavfilter-dev libswscale-dev libswresample-dev && pip install uv && uv sync
+    startCommand: uv run uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: STREAM_API_KEY
+        sync: false
+      - key: STREAM_SECRET
+        sync: false
+      - key: STREAM_API_SECRET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
